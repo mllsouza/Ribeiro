@@ -1,5 +1,5 @@
 let chars, particles, canvas, ctx, w, h, current;
-let duration = 8000;
+let duration = 5000;
 let str = ['FELIZ', 'NATAL', 'E', 'UM', 'PRÓSPERO', 'ANO', 'NOVO'];
 // let str = ['QUE', 'O', 'NATAL', 'ILUMINE', 'SEUS', 'SONHOS', 'E', 'O', 'ANO', 'NOVO', 'INSPIRE', 'CONQUISTAS', 'GRANDIOSAS!', 'DO', 'SEU', 'AMIGO', 'RIBEIRO'];
 
