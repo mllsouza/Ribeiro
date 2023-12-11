@@ -1,5 +1,5 @@
 let chars, particles, canvas, ctx, w, h, current;
-let duration = 5000;
+let duration = 8000;
 let str = ['FELIZ', 'NATAL', 'E', 'UM', 'PRÓSPERO', 'ANO', 'NOVO'];
 // let str = ['QUE', 'O', 'NATAL', 'ILUMINE', 'SEUS', 'SONHOS', 'E', 'O', 'ANO', 'NOVO', 'INSPIRE', 'CONQUISTAS', 'GRANDIOSAS!', 'DO', 'SEU', 'AMIGO', 'RIBEIRO'];
 
@@ -20,9 +20,15 @@ function makeChar(c) {
   tmpCtx.textBaseline = "middle";
   tmpCtx.textAlign = "center";
   tmpCtx.fillText(c, size / 2, size / 2);
+
+  // Ajuste para tornar as letras mais nítidas
+  tmpCtx.lineWidth = 2;
+  tmpCtx.strokeStyle = 'white';
+  tmpCtx.strokeText(c, size / 2, size / 2);
+
   let char2 = tmpCtx.getImageData(0, 0, size, size);
   let char2particles = [];
-  for (var i = 0; char2particles.length < particles; i++) {
+  for (var i = 0; char2particles.length < particles * 2; i++) { // Aumentei o número de partículas
     let x = size * Math.random();
     let y = size * Math.random();
     let offset = parseInt(y) * size * 4 + parseInt(x) * 4;
